@@ -23,17 +23,9 @@ int main() {
     printf("Informe num: ");
     scanf("%d", &num);
 
-    for (int i=1; i<=num; i++) {
-        if (i<num) { 
-            printf("%d, ", resposta);
-        }
-        else if (i==num) {
-            printf("%d ... ", resposta);
-        }
-        
-        aux1 = resposta + pos;
-        resposta = pos;
-        pos = aux1;
+    for (int i=1; i<=num; aux1 = resposta + pos, resposta = pos, pos = aux1, i++) {
+        printf("%d, ", resposta);      
     }
+    printf("...");
 }
 
